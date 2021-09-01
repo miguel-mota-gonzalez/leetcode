@@ -41,7 +41,7 @@ public:
         int end=0;
         map<char,int> tI = targetItems;
         for(char &c : s){            
-            // Is this character requiered?
+            // Is this character allowed?
             if(allowed.find(c)!=string::npos){            
                 // If the string found hasn't started not lastfound queue                 
                 if(start==-1 && lastFound.size()==0){
