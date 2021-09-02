@@ -73,7 +73,7 @@ public:
                 else{
                     nums1[i]=nums2[n_++];
                 }
-            }// Mp ,pre num2 available but we still have removed values
+            }// num2 is not available but we still have removed values
             else if(removed.size()>0 && removed.front()<nums1[i]){
                 removed.push(nums1[i]);
                 nums1[i]=removed.front();
