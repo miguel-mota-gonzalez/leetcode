@@ -28,15 +28,21 @@ class Solution {
 public:
     bool isPalindrome(string s) {
         bool retVal=true;
-        vector<char> tmp;
-        
-        for(const char &c : s)
-            if(isalnum(c))
-                tmp.push_back((char)tolower(c));
 
-        int start=0,pos=tmp.size()-1;
+        int start=0,pos=s.size()-1;
         while(start!=pos && start < pos){
-            if(tmp[start++]!=tmp[pos--]){
+            
+            if(!isalnum(s[start])){
+                start++;
+                continue;
+            }
+            
+            if(!isalnum(s[pos])){
+                pos--;
+                continue;
+            }
+            
+            if(tolower(s[start++])!=tolower(s[pos--])){
                 retVal=false;
                 break;
             }
