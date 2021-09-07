@@ -47,10 +47,10 @@ public:
             return false;
         
         if(s.size()==0)
-            return t.size();
+            return (t.size()==1);
         
         if(t.size()==0)
-            return s.size();
+            return (s.size()==1);
         
         if(s.size()==1 && t.size()==1)
             return true;
