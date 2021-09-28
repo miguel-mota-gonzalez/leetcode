@@ -34,6 +34,8 @@ public:
             }
         }
 
+        // In this queue we are keeping the elements that were already found
+        // so we can rebuild the status
         queue<int> lastFound;
         int minStart=-1;
         int minEnd=-1;
@@ -41,7 +43,7 @@ public:
         int end=0;
         map<char,int> tI = targetItems;
         for(char &c : s){            
-            // Is this character allowed?
+            // Is this character requiered?
             if(allowed.find(c)!=string::npos){            
                 // If the string found hasn't started not lastfound queue                 
                 if(start==-1 && lastFound.size()==0){
@@ -75,7 +77,7 @@ public:
                         // Remove the first found
                         lastFound.pop();                    
 
-                        // now start is the net element
+                        // now start is the next element
                         start = lastFound.front();                           
 
                         // Reset the map with the elemwents we are looking for
