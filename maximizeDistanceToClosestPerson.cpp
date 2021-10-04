@@ -50,7 +50,6 @@ public:
         while(++a<=--b){            
             if(++counter>max)
                 max=counter;
-            }
         }        
     }
     
