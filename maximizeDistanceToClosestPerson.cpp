@@ -48,7 +48,7 @@ public:
     void checkInterVal(int a, int b, int &max, vector<int>& seats){
         int counter=0;
         while(++a<=--b){            
-            if(++counter>max){
+            if(++counter>max)
                 max=counter;
             }
         }        
